@@ -181,7 +181,7 @@ public class TocFinal
 										return c2-c1;
 										for(int i = 0;i<L;i++)
 										if(i2.ar[i]!=i1.ar[i])
-										return i2.ar[i]-i1.ar[i]; 
+										return i1.ar[i]-i2.ar[i]; 
 										return 0;
 										}
 										});
@@ -202,17 +202,20 @@ public class TocFinal
 										v = All.get(i).value;
 										if(Count.get(v).equals(Count.get(v1)))
 										{
-
+												
+												if(tk<=topk)
 												System.out.println(v+";"+Count.get(v));
 												v1 = new String(v);
+												tk++;
 										}
 										else
 										{
 												if(tk+1<=topk)
 												{
-														System.out.println(v+";"+Count.get(v));
-														v1 = new String(v);
+												System.out.println(v+";"+Count.get(v));
 												}
+												
+												v1 = new String(v);
 												tk++;
 										}
 								}
