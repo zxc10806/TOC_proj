@@ -206,7 +206,9 @@ public class TocFinal
 												if(tk<=topk)
 												System.out.println(v+";"+Count.get(v));
 												v1 = new String(v);
+												if(tk+1<=topk)
 												tk++;
+												
 										}
 										else
 										{
