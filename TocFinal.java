@@ -103,11 +103,13 @@ public class TocFinal
 								String tmp="";
 								String res;
 								res = String.valueOf(o.get(Field[FF[0]]));
+								if(res.equals(""))
+									return ;
 								tmp=Field[FF[0]]+":"+res;
 								for(int i = 1;i<L;i++)
 								{
 										res = String.valueOf(o.get(Field[FF[i]]));
-										if(res==null)
+										if(res.equals(""))
 											return ;
 										tmp+=","+Field[FF[i]]+":"+res;
 								}
