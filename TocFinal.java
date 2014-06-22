@@ -107,6 +107,8 @@ public class TocFinal
 								for(int i = 1;i<L;i++)
 								{
 										res = String.valueOf(o.get(Field[FF[i]]));
+										if(res==null)
+											return ;
 										tmp+=","+Field[FF[i]]+":"+res;
 								}
 								if(Count.get(tmp)==null)
